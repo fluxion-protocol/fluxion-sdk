@@ -1,6 +1,6 @@
 # Fluxion SDK
 
-[![npm version](https://img.shields.io/npm/v/@fluxion/sdk.svg)](https://www.npmjs.com/package/@fluxion/sdk)
+[![npm version](https://img.shields.io/npm/v/fluxion-sdk.svg)](https://www.npmjs.com/package/fluxion-sdk)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Type coverage](https://img.shields.io/badge/type%20coverage-100%25-brightgreen)]()
 
