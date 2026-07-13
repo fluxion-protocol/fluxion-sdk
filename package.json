@@ -1,0 +1,73 @@
+{
+  "name": "fluxion-sdk",
+  "version": "1.0.0",
+  "description": "The developer toolkit for interacting with Fluxion streams on the Stellar/Soroban network.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint src/ --ext .ts",
+    "lint:fix": "eslint src/ --ext .ts --fix",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "format:check": "prettier --check \"src/**/*.ts\"",
+    "docs": "typedoc src/index.ts",
+    "type-check": "tsc --noEmit",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run test && npm run lint && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fluxion-protocol/fluxion-sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fluxion-protocol/fluxion-sdk/issues"
+  },
+  "homepage": "https://github.com/fluxion-protocol/fluxion-sdk#readme",
+  "keywords": [
+    "stellar",
+    "soroban",
+    "fluxion",
+    "streaming",
+    "defi",
+    "sdk",
+    "web3",
+    "typescript"
+  ],
+  "author": "Fluxion Protocol Foundation",
+  "license": "Apache-2.0",
+  "peerDependencies": {
+    "@stellar/freighter-api": "^2.0.0",
+    "@stellar/stellar-sdk": "^13.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "@vitest/coverage-v8": "^2.0.0",
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5",
+    "tsup": "^8.0.2",
+    "typedoc": "^0.25.13",
+    "typescript": "^5.4.5",
+    "vitest": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
